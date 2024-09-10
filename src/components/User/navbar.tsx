@@ -6,16 +6,11 @@ import Link from "next/link"
 import { cn } from "@/lib/utils"
 
 import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
+ 
+  NavigationMenuLink, 
 } from "@/components/ui/navigation-menu"
-import { useParams, usePathname, useSearchParams } from "next/navigation"
-import { HamburgerMenuIcon } from "@radix-ui/react-icons"
+import {   usePathname } from "next/navigation"
+
 
 const components: { title: string; href: string; description: string }[] = [
   {

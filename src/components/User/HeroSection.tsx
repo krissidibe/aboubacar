@@ -1,6 +1,6 @@
 import { EnvelopeClosedIcon, LinkedInLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
-import Link from "next/link";
+
 import React from "react";
 import { LinkSocial } from "./LinkSocial";
 
