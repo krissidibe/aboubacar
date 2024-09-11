@@ -7,16 +7,37 @@ import React from "react";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import { IconApple, IconBrandAppstore, IconBrandGooglePlay } from "@tabler/icons-react";
+import RevealOnScroll from "./RevealOnScroll";
 
 const ProjectSection = () => {
   return (
     <div id="projects" className="flex flex-col  mt-0  pb-20">
       <p className="font-bold text-2xl mb-4">Project</p>
       <div className="flex flex-col md:gap-[120px] gap-[60px]">
+        <RevealOnScroll>
+
         {PaymeFinance()}
+        </RevealOnScroll>
+
+
+        <RevealOnScroll>
+
         {PaymeFinanceMobile()}
+
+</RevealOnScroll>
+
+<RevealOnScroll>
+
         {Smartio()}
+
+</RevealOnScroll>
+
+<RevealOnScroll>
+
+
         {Afrilangue()}
+</RevealOnScroll>
+
 
         <div>
           <p className="font-bold text-2xl mb-2">Other Project</p>

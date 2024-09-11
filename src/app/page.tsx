@@ -3,6 +3,7 @@ import GridBackgroundDemo from '@/components/User/GridBG'
 import HeroSection from '@/components/User/HeroSection'
 import Navigation from '@/components/User/navbar'
 import ProjectSection from '@/components/User/ProjectSection'
+import RevealOnScroll from '@/components/User/RevealOnScroll'
 import React from 'react'
 
 const page = () => {
@@ -19,8 +20,13 @@ const page = () => {
 
 {/* HEro */}
 <HeroSection/>
+ 
 <ProjectSection/>
+
+<RevealOnScroll>
+
 <FooterSection/>
+</RevealOnScroll>
     </div>
   )
 }
