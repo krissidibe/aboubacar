@@ -13,7 +13,7 @@ const RevealOnScroll = ({ children }:{children: React.ReactNode}) => {
       ref={ref}
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ duration: 1.5 }}
+      transition={{ duration: 1.0 }}
     >
       {children}
     </motion.div>
