@@ -61,7 +61,7 @@ export default function Navigation() {
      <LinkMenu name="Projects" link="#projects" />
      <LinkMenu name="Contact" link="#contact" />
 
-     <LinkMenu name="Download" link="/Aboubacar-resume-english.pdf" />
+     <LinkMenu name="Download" link="/Aboubacar-dev.pdf" />
 
 
      </div>
