@@ -61,7 +61,7 @@ export default function Navigation() {
      <LinkMenu name="Projects" link="#projects" />
      <LinkMenu name="Contact" link="#contact" />
 
-     <LinkMenu name="Download" link="none" />
+     <LinkMenu name="Download" link="/Aboubacar-resume-english.pdf" />
 
 
      </div>
@@ -69,11 +69,12 @@ export default function Navigation() {
       
     </div>
   )
-  function LinkMenu({name,link}:{name:string,link:string}) {
+  function LinkMenu({name,link,isTarget}:{isTarget?:boolean,name:string,link:string}) {
     return <Link
     onClick={()=>{
     /*     setActiveLink(x=> x = link) */
     }}
+    target={isTarget ? "_blank" : ""}
     className={`text-sm hover:border-b-muted/10 font-semibold p-2 px-3 rounded-lg  `} href={link}>{name}</Link>
 }
 
