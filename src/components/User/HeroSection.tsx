@@ -11,7 +11,7 @@ const HeroSection = () => {
         <p className="sm:text-4xl text-xl text-orange-400 ">Hey there!, I'm</p>
         <p className="sm:text-6xl text-xl font-bold">Aboubacar Sidiki Sidibé</p>
         <p className="sm:text-xl">
-          <span> Software Engineer </span>
+          <span> Software developer </span>
           <span className=" opacity-50">
             A self-taught developer with a passion for technology, always eager
             to learn new skills and expand knowledge in the field of digital
