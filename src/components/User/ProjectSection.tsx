@@ -1,43 +1,20 @@
-import {
-  ArrowRightIcon,
- 
-} from "@radix-ui/react-icons";
+import { ArrowRightIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
-import React from "react";
 import { Button } from "../ui/button";
 import Link from "next/link";
-import { IconApple, IconBrandAppstore, IconBrandGooglePlay } from "@tabler/icons-react";
-import RevealOnScroll from "./RevealOnScroll";
 
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { IconBrandAppstore, IconBrandGooglePlay } from "@tabler/icons-react";
 const ProjectSection = () => {
   return (
     <div id="projects" className="flex flex-col  mt-0  pb-20">
       <p className="font-bold text-2xl mb-4">Project</p>
+
       <div className="flex flex-col md:gap-[120px] gap-[60px]">
-        <RevealOnScroll>
-
         {PaymeFinance()}
-        </RevealOnScroll>
-
-
-        <RevealOnScroll>
-
         {PaymeFinanceMobile()}
-
-</RevealOnScroll>
-
-<RevealOnScroll>
-
         {Smartio()}
-
-</RevealOnScroll>
-
-<RevealOnScroll>
-
-
         {Afrilangue()}
-</RevealOnScroll>
-
 
         <div>
           <p className="font-bold text-2xl mb-2">Other Project</p>
@@ -65,54 +42,54 @@ const ProjectSection = () => {
             <div>
               <p className="">Unity Game Creation</p>
               <p className=" opacity-50 text-sm">
-              I also handle video game creation quite well; here are a few examples:
-
+                I also handle video game creation quite well; here are a few
+                examples:
               </p>
               <div className="grid  md:grid-cols-2  gap-2 mt-2 ">
-              <div className=" group  aspect-video  bg-muted cursor-pointer relative">
-          <div className="bg-black/20 hidden items-end justify-center py-4 transition-all ease-in-out duration-500  inset-0 z-50  group-hover:flex absolute">
-          
-          <Link href={"https://www.linkedin.com/posts/aboubacar-sidiki-sidibe-7504a0165_unity-madebyunity-game-activity-7052205878686425088-ywJJ?utm_source=share&utm_medium=member_desktop"} target="_blank">
-              <Button className="group">
-              Watch the video. <ArrowRightIcon />{" "}
-              </Button>
-            </Link>
-          </div>
-          <Image
-            className=" w-full h-full"
-            alt="react"
-            src="/images/game1.png"
-            width={800}
-            height={800}
-          />
-        </div>
+                <div className=" group  aspect-video  bg-muted cursor-pointer relative">
+                  <div className="bg-black/20 hidden items-end justify-center py-4 transition-all ease-in-out duration-500  inset-0 z-50  group-hover:flex absolute">
+                    <Link
+                      href={
+                        "https://www.linkedin.com/posts/aboubacar-sidiki-sidibe-7504a0165_unity-madebyunity-game-activity-7052205878686425088-ywJJ?utm_source=share&utm_medium=member_desktop"
+                      }
+                      target="_blank"
+                    >
+                      <Button className="mr-2 group">
+                        Watch the video. <ArrowRightIcon />{" "}
+                      </Button>
+                    </Link>
+                  </div>
+                  <Image
+                    className=" w-full h-full"
+                    alt="react"
+                    src="/images/game1.png"
+                    width={800}
+                    height={800}
+                  />
+                </div>
 
-
-
-
-
-
-
-        <div className=" group  aspect-video  bg-muted cursor-pointer relative">
-          <div className="bg-black/20 hidden items-end justify-center py-4 transition-all ease-in-out duration-500  inset-0 z-50  group-hover:flex absolute">
-          
-          <Link href={"https://www.linkedin.com/posts/aboubacar-sidiki-sidibe-7504a0165_game-africaabrgame-unity-activity-7014204809884917760-iR_y?utm_source=share&utm_medium=member_desktop"} target="_blank">
-              <Button className="group">
-              Watch the video. <ArrowRightIcon />{" "}
-              </Button>
-            </Link>
-          </div>
-          <Image
-            className=" w-full h-full"
-            alt="react"
-            src="/images/game2.png"
-            width={800}
-            height={800}
-          />
-        </div>
-
-        
-             </div>
+                <div className=" group  aspect-video  bg-muted cursor-pointer relative">
+                  <div className="bg-black/20 hidden items-end justify-center py-4 transition-all ease-in-out duration-500  inset-0 z-50  group-hover:flex absolute">
+                    <Link
+                      href={
+                        "https://www.linkedin.com/posts/aboubacar-sidiki-sidibe-7504a0165_game-africaabrgame-unity-activity-7014204809884917760-iR_y?utm_source=share&utm_medium=member_desktop"
+                      }
+                      target="_blank"
+                    >
+                      <Button className="mr-2 group">
+                        Watch the video. <ArrowRightIcon />{" "}
+                      </Button>
+                    </Link>
+                  </div>
+                  <Image
+                    className=" w-full h-full"
+                    alt="react"
+                    src="/images/game2.png"
+                    width={800}
+                    height={800}
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -123,13 +100,15 @@ const ProjectSection = () => {
   function PaymeFinance() {
     return (
       <div className="grid sm:grid-cols-2 gap-4">
-        <Link href={"https://paymefinance.com"} target="_blank" className=" group  aspect-video  bg-muted cursor-pointer relative">
+        <Link
+          href={"https://paymefinance.com"}
+          target="_blank"
+          className=" group  aspect-video  bg-muted cursor-pointer relative"
+        >
           <div className="bg-black/20 hidden items-end justify-center py-4 transition-all ease-in-out duration-500  inset-0 z-50  group-hover:flex absolute">
-            
-              <Button className="group">
-                Try Payme Finance <ArrowRightIcon />{" "}
-              </Button>
-
+            <Button className="mr-2 group">
+              Try Payme Finance <ArrowRightIcon />{" "}
+            </Button>
           </div>
           <Image
             className=" w-full h-full"
@@ -182,7 +161,9 @@ const ProjectSection = () => {
               <Image
                 className="rounded-full p-2 border-muted/20 border "
                 alt="react"
-                src={"https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/993px-Postgresql_elephant.svg.png"}
+                src={
+                  "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/993px-Postgresql_elephant.svg.png"
+                }
                 width={40}
                 height={40}
               />
@@ -266,7 +247,9 @@ const ProjectSection = () => {
               <Image
                 className="rounded-full p-2 border-muted/20 border "
                 alt="react"
-                src={"https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/993px-Postgresql_elephant.svg.png"}
+                src={
+                  "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/993px-Postgresql_elephant.svg.png"
+                }
                 width={40}
                 height={40}
               />
@@ -282,7 +265,33 @@ const ProjectSection = () => {
       <div className="grid sm:grid-cols-2 gap-4">
         <div className=" group sm:hidden block  aspect-video  bg-muted cursor-pointer relative">
           <div className="bg-black/20 hidden items-end justify-center py-4 transition-all ease-in-out duration-500  inset-0 z-50  group-hover:flex absolute">
-            <Button className="group">Version mobile SOON 😇</Button>
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button className="mr-2 group">Version mobile</Button>
+              </DialogTrigger>
+              <DialogContent className="bg-black max-w-xs">
+                <p>Mobile Version</p>
+                <div className="w-full justify-between flex">
+                  <Link
+                    href={
+                      "https://apps.apple.com/us/app/payme-facturation-et-finance/id6737771817"
+                    }
+                    target="_blank"
+                  >
+                    <Button
+                      type="button"
+                      variant={"default"}
+                      className=" gap-2"
+                    >
+                      <IconBrandAppstore /> AppStore
+                    </Button>
+                  </Link>
+                  <Button type="button" variant={"default"} className=" gap-2">
+                    <IconBrandGooglePlay /> Play Play
+                  </Button>
+                </div>
+              </DialogContent>
+            </Dialog>
           </div>
           <Image
             className=" w-full h-full"
@@ -340,7 +349,33 @@ const ProjectSection = () => {
 
         <div className=" group sm:block hidden  aspect-video  bg-muted cursor-pointer relative">
           <div className="bg-black/20 hidden items-end justify-center py-4 transition-all ease-in-out duration-500  inset-0 z-50  group-hover:flex absolute">
-            <Button className="group">Version mobile SOON 😇</Button>
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button className="mr-2 group">Version mobile</Button>
+              </DialogTrigger>
+              <DialogContent className="bg-black max-w-xs">
+                <p>Mobile Version</p>
+                <div className="w-full justify-between flex">
+                  <Link
+                    href={
+                      "https://apps.apple.com/us/app/payme-facturation-et-finance/id6737771817"
+                    }
+                    target="_blank"
+                  >
+                    <Button
+                      type="button"
+                      variant={"default"}
+                      className=" gap-2"
+                    >
+                      <IconBrandAppstore /> AppStore
+                    </Button>
+                  </Link>
+                  <Button type="button" variant={"default"} className=" gap-2">
+                    <IconBrandGooglePlay /> Play Play
+                  </Button>
+                </div>
+              </DialogContent>
+            </Dialog>
           </div>
           <Image
             className=" w-full h-full"
@@ -354,20 +389,18 @@ const ProjectSection = () => {
     );
   }
 
-
-
   function Afrilangue() {
     return (
       <div className="grid sm:grid-cols-2 gap-4">
         <div className=" group sm:hidden block  aspect-video  bg-muted cursor-pointer relative">
-          <div className="bg-black/20 hidden items-end gap-4 justify-center py-4 transition-all ease-in-out duration-500  inset-0 z-50  group-hover:flex absolute">
-          <Link href={"https://apps.apple.com/fr/app/afrilangues-officiel/id1511912820"}>
-            <Button className="group"> <IconBrandAppstore size={20} className="mr-2" /> Appstore</Button>
-            
-          </Link>
-          <Link href={"https://play.google.com/store/apps/details?id=com.afrilangues.app&hl=fr"}>
-            <Button className="group"><IconBrandGooglePlay size={20} className="mr-2" /> Playstore</Button>
-          </Link>
+          <div className="bg-black/20 hidden items-end justify-center py-4 transition-all ease-in-out duration-500  inset-0 z-50  group-hover:flex absolute">
+            <Link
+              href={
+                "https://play.google.com/store/apps/details?id=com.afrilangues.app&hl=fr"
+              }
+            >
+              <Button className="mr-2 group">Playstore</Button>
+            </Link>
           </div>
           <Image
             className=" w-full h-full"
@@ -381,7 +414,7 @@ const ProjectSection = () => {
         <div className="flex flex-col ">
           <p className="font-bold md:text-2xl text-md">
             {" "}
-            <span className="text-orange-400">Afrilangues</span> Mobile version
+            <span className="text-orange-400">Afrilangues</span> Web & Mobile
           </p>
           <div className="text-sm opacity-50">
             <p className="text-lg mb-2">
@@ -413,9 +446,7 @@ const ProjectSection = () => {
               <Image
                 className="rounded-full max-h-[40px]  p-1 bg-white border-muted/20 border "
                 alt="react"
-                src={
-                  "https://cdn.worldvectorlogo.com/logos/firebase-1.svg"
-                }
+                src={"https://cdn.worldvectorlogo.com/logos/firebase-1.svg"}
                 width={40}
                 height={40}
               />
@@ -424,14 +455,14 @@ const ProjectSection = () => {
         </div>
 
         <div className=" group sm:block hidden  aspect-video  bg-muted cursor-pointer relative">
-          <div className="bg-black/20 hidden items-end gap-4 justify-center py-4 transition-all ease-in-out duration-500  inset-0 z-50  group-hover:flex absolute">
-          <Link href={"https://apps.apple.com/fr/app/afrilangues-officiel/id1511912820"}>
-            <Button className="group"> <IconBrandAppstore size={20} className="mr-2" /> Appstore</Button>
-            
-          </Link>
-          <Link href={"https://play.google.com/store/apps/details?id=com.afrilangues.app&hl=fr"}>
-            <Button className="group"><IconBrandGooglePlay size={20} className="mr-2" /> Playstore</Button>
-          </Link>
+          <div className="bg-black/20 hidden items-end justify-center py-4 transition-all ease-in-out duration-500  inset-0 z-50  group-hover:flex absolute">
+            <Link
+              href={
+                "https://play.google.com/store/apps/details?id=com.afrilangues.app&hl=fr"
+              }
+            >
+              <Button className="mr-2 group">Playstore</Button>
+            </Link>
           </div>
           <Image
             className=" w-full h-full"
