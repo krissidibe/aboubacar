@@ -1,14 +1,19 @@
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
-import { Button } from "../ui/button";
 import Link from "next/link";
+import { Button } from "../ui/button";
 
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { IconBrandAppstore, IconBrandGooglePlay } from "@tabler/icons-react";
 const ProjectSection = () => {
   return (
     <div id="projects" className="flex flex-col  mt-0  pb-20">
-      <p className="font-bold text-2xl mb-4">Project</p>
+      <div className=" flex flex-col items-center justify-center my-10 relative  ">
+        <div className="absolute w-full h-[1px] bg-white/10 top-4 "></div>
+        <p className="font-bold text-2xl self-center z-40 bg-[#0a0a0a] px-4">
+          Projects
+        </p>
+      </div>
 
       <div className="flex flex-col md:gap-[120px] gap-[60px]">
         {PaymeFinance()}
@@ -286,8 +291,12 @@ const ProjectSection = () => {
                       <IconBrandAppstore /> AppStore
                     </Button>
                   </Link>
-                  <Button type="button" variant={"default"} className=" gap-2">
-                    <IconBrandGooglePlay /> Play Play
+                  <Button
+                    type="button"
+                    variant={"default"}
+                    className=" opacity-40 gap-2"
+                  >
+                    <IconBrandGooglePlay /> PlayStore
                   </Button>
                 </div>
               </DialogContent>
@@ -370,8 +379,12 @@ const ProjectSection = () => {
                       <IconBrandAppstore /> AppStore
                     </Button>
                   </Link>
-                  <Button type="button" variant={"default"} className=" gap-2">
-                    <IconBrandGooglePlay /> Play Play
+                  <Button
+                    type="button"
+                    variant={"default"}
+                    className=" gap-2 opacity-30"
+                  >
+                    <IconBrandGooglePlay /> PlayStore
                   </Button>
                 </div>
               </DialogContent>
