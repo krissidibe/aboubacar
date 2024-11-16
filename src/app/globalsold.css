@@ -9,10 +9,8 @@
 html,
 body,
 :root {
-  @apply w-full h-full  ;
-
+  @apply w-full h-full;
 }
-
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -93,7 +91,6 @@ body {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground   ;
+    @apply bg-background text-foreground;
   }
 }
- 
