@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { HeroScrollDemo } from "../heroscroll";
+import RevealOnScroll from "./RevealOnScroll";
 
 const HeroSection = () => {
   return (
@@ -15,22 +16,26 @@ const HeroSection = () => {
           }
         />
 
-        <p className="sm:text-xl text-xl text-orange-400 gap-2 flex ">
-          Hey there!, I'm
-          <span className="text-white font-bold">Aboubacar</span>
-        </p>
+        <RevealOnScroll>
+          <p className="sm:text-xl text-xl text-orange-400 gap-2 flex ">
+            Hey there!, I'm
+            <span className="text-white font-bold">Aboubacar</span>
+          </p>
+        </RevealOnScroll>
       </div>
-      <div className="flex flex-col gap-4 mt-2">
-        <p className="w-full max-w-xl m-auto">
-          <span> Software Developer </span>
-          <span className=" opacity-50">
-            A self-taught developer with a passion for technology, always eager
-            to learn new skills and expand knowledge in the field of digital
-            innovations.
-          </span>
-        </p>
 
-        {/* <div className="flex gap-4 items-center justify-start sm:justify-start py-4 self-center">
+      <RevealOnScroll>
+        <div className="flex flex-col gap-4 mt-2">
+          <p className="w-full max-w-xl m-auto">
+            <span> Software Developer </span>
+            <span className=" opacity-50">
+              A self-taught developer with a passion for technology, always
+              eager to learn new skills and expand knowledge in the field of
+              digital innovations.
+            </span>
+          </p>
+
+          {/* <div className="flex gap-4 items-center justify-start sm:justify-start py-4 self-center">
           <LinkSocial
             link="https://www.linkedin.com/in/aboubacar-sidiki-sidibe-7504a0165/"
             logo={<LinkedInLogoIcon />}
@@ -47,8 +52,12 @@ const HeroSection = () => {
             name={"Email"}
           />
         </div> */}
-      </div>
-      <HeroScrollDemo />
+        </div>
+      </RevealOnScroll>
+
+      <RevealOnScroll>
+        <HeroScrollDemo />
+      </RevealOnScroll>
 
       {/*     <div className="flex flex-col gap-1 mt-4">
         <p className="text-sm sm:text-lg">
@@ -64,31 +73,33 @@ const HeroSection = () => {
       </div>
  */}
 
-      <div className=" flex flex-col items-center justify-center my-10 relative  ">
-        <div className="absolute w-full h-[1px] bg-white/10 top-4 "></div>
-        <p className="font-bold text-2xl self-center z-40 bg-[#0a0a0a] px-4">
-          About Me
-        </p>
-        <div className="flex flex-col text-base items-center">
-          <p className="py-0 mt-4">
-            Co-founder & Chief Technology Officer (CTO) at{" "}
-            <span className="text-orange-400">Payme Finance</span> | Founder at{" "}
-            <span className="text-orange-400">Mee Enterprise Group</span>
+      <RevealOnScroll>
+        <div className=" flex flex-col items-center justify-center my-10 relative  ">
+          <div className="absolute w-full h-[1px] bg-white/10 top-4 "></div>
+          <p className="font-bold text-2xl self-center z-40 bg-[#0a0a0a] px-4">
+            About Me
           </p>
-          <p className="opacity-50 text-center">
-            Passionate about creating innovative applications and convinced of
-            the growing importance of the digital world, I am a versatile mobile
-            and web developer. With solid expertise in developing Android and
-            iOS applications, as well as modern websites, I strive to turn ideas
-            into functional and intuitive products while ensuring an optimal
-            user experience.
-          </p>
-          <p className="pt-2 opacity-50 text-center">
-            When I’m not coding, I enjoy playing PS5 games with my friends,
-            doing sports, and staying up-to-date with tech trends.
-          </p>
+          <div className="flex flex-col text-base items-center">
+            <p className="py-0 mt-4">
+              Co-founder & Chief Technology Officer (CTO) at{" "}
+              <span className="text-orange-400">Payme Finance</span> | Founder
+              at <span className="text-orange-400">Mee Enterprise Group</span>
+            </p>
+            <p className="opacity-50 text-center">
+              Passionate about creating innovative applications and convinced of
+              the growing importance of the digital world, I am a versatile
+              mobile and web developer. With solid expertise in developing
+              Android and iOS applications, as well as modern websites, I strive
+              to turn ideas into functional and intuitive products while
+              ensuring an optimal user experience.
+            </p>
+            <p className="pt-2 opacity-50 text-center">
+              When I’m not coding, I enjoy playing PS5 games with my friends,
+              doing sports, and staying up-to-date with tech trends.
+            </p>
+          </div>
         </div>
-      </div>
+      </RevealOnScroll>
     </div>
   );
 };

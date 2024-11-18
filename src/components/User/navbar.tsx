@@ -1,16 +1,12 @@
-"use client"
+"use client";
 
-import React, {useState} from "react"
-import Link from "next/link"
+import Link from "next/link";
+import React, { useState } from "react";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
-import {
- 
-  NavigationMenuLink, 
-} from "@/components/ui/navigation-menu"
-import {   usePathname } from "next/navigation"
-
+import { NavigationMenuLink } from "@/components/ui/navigation-menu";
+import { usePathname } from "next/navigation";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -48,37 +44,45 @@ const components: { title: string; href: string; description: string }[] = [
     description:
       "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
   },
-]
+];
 
-export default function Navigation() { 
-    const nav = usePathname()
-    const [activeLink, setActiveLink] = useState("#aboutme")
+export default function Navigation() {
+  const nav = usePathname();
+  const [activeLink, setActiveLink] = useState("#aboutme");
   return (
     <div className="flex">
-         <div className="  gap-2  text-xs lg:text-md    flex pr-4 z-[200] ">
-     <LinkMenu name="About me" link="#aboutme" />
+      <div className="  gap-2  text-xs lg:text-md    flex pr-4 z-[200] ">
+        <LinkMenu name="About me" link="#aboutme" />
 
-     <LinkMenu name="Projects" link="#projects" />
-     <LinkMenu name="Contact" link="#contact" />
+        <LinkMenu name="Projects" link="#projects" />
+        <LinkMenu name="Contact" link="#contact" />
 
-     <LinkMenu name="Download" link="/Aboubacar-dev.pdf" />
-
-
-     </div>
-
-      
+        <LinkMenu name="Download" link="/Aboubacar-dev.pdf" />
+      </div>
     </div>
-  )
-  function LinkMenu({name,link,isTarget}:{isTarget?:boolean,name:string,link:string}) {
-    return <Link
-    onClick={()=>{
-    /*     setActiveLink(x=> x = link) */
-    }}
-    target={isTarget ? "_blank" : ""}
-    className={`text-sm hover:border-b-muted/10 font-semibold p-2 px-3 rounded-lg  `} href={link}>{name}</Link>
-}
-
-
+  );
+  function LinkMenu({
+    name,
+    link,
+    isTarget,
+  }: {
+    isTarget?: boolean;
+    name: string;
+    link: string;
+  }) {
+    return (
+      <Link
+        onClick={() => {
+          /*     setActiveLink(x=> x = link) */
+        }}
+        target={isTarget ? "_blank" : ""}
+        className={`text-sm hover:border-b-muted/10 font-semibold p-2 px-3 rounded-lg  `}
+        href={link}
+      >
+        {name}
+      </Link>
+    );
+  }
 }
 
 const ListItem = React.forwardRef<
@@ -103,6 +107,6 @@ const ListItem = React.forwardRef<
         </a>
       </NavigationMenuLink>
     </li>
-  )
-})
-ListItem.displayName = "ListItem"
+  );
+});
+ListItem.displayName = "ListItem";

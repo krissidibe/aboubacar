@@ -6,6 +6,7 @@ import { Button } from "../ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { IconBrandAppstore, IconBrandGooglePlay } from "@tabler/icons-react";
 import { BentoGridThird } from "./BentoGridThird";
+import RevealOnScroll from "./RevealOnScroll";
 const ProjectSection = () => {
   return (
     <div id="projects" className="flex flex-col  mt-0  pb-20">
@@ -19,8 +20,88 @@ const ProjectSection = () => {
       <div className="p-10 md:px-0 w-full flex justify-center items-center opacity-70">
         <p className="text-xl ">Some selection of recent projects</p>
       </div>
+
       <BentoGridThird />
 
+      <RevealOnScroll>
+        <div className="py-10 md:px-10  ">
+          <p className="font-bold text-2xl mb-8">Other Project</p>
+
+          <div className="flex flex-col gap-6">
+            <div>
+              <p className="">BENKAN MOBILE</p>
+              <p className=" opacity-50 text-sm">
+                Mobile application for a political party aimed at publishing
+                content on the app and facilitating the recruitment of new
+                members. with
+                <span className="text-orange-400  ml-1 ">Flutter</span>
+              </p>
+            </div>
+            <div>
+              <p className="">Concours Justice Mali</p>
+              <p className=" opacity-50 text-sm">
+                Website for managing prison guard competitions in Mali, it
+                facilitated the handling of applications and other related
+                tasks. with
+                <span className="text-orange-400 ml-1  ">Nextjs</span>
+              </p>
+            </div>
+
+            <div>
+              <p className="">Unity Game Creation</p>
+              <p className=" opacity-50 text-sm">
+                I also handle video game creation quite well; here are a few
+                examples:
+              </p>
+              <div className="grid  md:grid-cols-2  gap-2 mt-2 ">
+                <div className=" group  aspect-video  bg-muted cursor-pointer relative">
+                  <div className="bg-black/20 hidden items-end justify-center py-4 transition-all ease-in-out duration-500  inset-0 z-50  group-hover:flex absolute">
+                    <Link
+                      href={
+                        "https://www.linkedin.com/posts/aboubacar-sidiki-sidibe-7504a0165_unity-madebyunity-game-activity-7052205878686425088-ywJJ?utm_source=share&utm_medium=member_desktop"
+                      }
+                      target="_blank"
+                    >
+                      <Button className="mr-2 group">
+                        Watch the video. <ArrowRightIcon />{" "}
+                      </Button>
+                    </Link>
+                  </div>
+                  <Image
+                    className=" w-full h-full"
+                    alt="react"
+                    src="/images/game1.png"
+                    width={800}
+                    height={800}
+                  />
+                </div>
+
+                <div className=" group  aspect-video  bg-muted cursor-pointer relative">
+                  <div className="bg-black/20 hidden items-end justify-center py-4 transition-all ease-in-out duration-500  inset-0 z-50  group-hover:flex absolute">
+                    <Link
+                      href={
+                        "https://www.linkedin.com/posts/aboubacar-sidiki-sidibe-7504a0165_game-africaabrgame-unity-activity-7014204809884917760-iR_y?utm_source=share&utm_medium=member_desktop"
+                      }
+                      target="_blank"
+                    >
+                      <Button className="mr-2 group">
+                        Watch the video. <ArrowRightIcon />{" "}
+                      </Button>
+                    </Link>
+                  </div>
+                  <Image
+                    className=" w-full h-full"
+                    alt="react"
+                    src="/images/game2.png"
+                    width={800}
+                    height={800}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </RevealOnScroll>
       {/*   <div className="flex flex-col md:gap-[120px] gap-[60px]">
         {PaymeFinance()}
         {PaymeFinanceMobile()}

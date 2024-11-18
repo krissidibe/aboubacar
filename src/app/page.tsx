@@ -1,34 +1,31 @@
-import FooterSection from '@/components/User/FooterSection'
-import GridBackgroundDemo from '@/components/User/GridBG'
-import HeroSection from '@/components/User/HeroSection'
-import Navigation from '@/components/User/navbar'
-import ProjectSection from '@/components/User/ProjectSection'
-import RevealOnScroll from '@/components/User/RevealOnScroll'
-import React from 'react'
+import FooterSection from "@/components/User/FooterSection";
+import GridBackgroundDemo from "@/components/User/GridBG";
+import HeroSection from "@/components/User/HeroSection";
+import Navigation from "@/components/User/navbar";
+import ProjectSection from "@/components/User/ProjectSection";
+import RevealOnScroll from "@/components/User/RevealOnScroll";
 
 const page = () => {
   return (
-    <div className='w-full max-w-5xl  mx-auto  h-full p-8 '>
+    <div className="w-full max-w-5xl  mx-auto  h-full p-8 ">
+      {/* nav */}
+      <GridBackgroundDemo />
+      <div className=" items-center gap-2 flex-col lg:flex-row    justify-center backdrop-blur-lg  flex lg:justify-between  top-0   w-full max-w-5xl py-3  z-50  left-0 right-0  bg-zinc-450  fixed  mx-auto">
+        <p className="font-bold text-xl">Aboubacar.dev</p>
 
-{/* nav */}
-<GridBackgroundDemo/>
-<div className=" items-center gap-2 flex-col lg:flex-row  justify-center  flex lg:justify-between  top-0   w-full max-w-5xl py-3  z-50  left-0 right-0  bg-zinc-950  fixed  mx-auto">
-  <p className='font-bold text-xl'>Aboubacar.dev</p>
+        <Navigation />
+      </div>
 
-<Navigation />
-</div>
+      {/* HEro */}
+      <HeroSection />
 
-{/* HEro */}
-<HeroSection/>
- 
-<ProjectSection/>
+      <ProjectSection />
 
-<RevealOnScroll>
-
-<FooterSection/>
-</RevealOnScroll>
+      <RevealOnScroll>
+        <FooterSection />
+      </RevealOnScroll>
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;
