@@ -5,6 +5,7 @@ import { Button } from "../ui/button";
 
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { IconBrandAppstore, IconBrandGooglePlay } from "@tabler/icons-react";
+import { BentoGridThird } from "./BentoGridThird";
 const ProjectSection = () => {
   return (
     <div id="projects" className="flex flex-col  mt-0  pb-20">
@@ -15,7 +16,12 @@ const ProjectSection = () => {
         </p>
       </div>
 
-      <div className="flex flex-col md:gap-[120px] gap-[60px]">
+      <div className="p-10 md:px-0 w-full flex justify-center items-center opacity-70">
+        <p className="text-xl ">Some selection of recent projects</p>
+      </div>
+      <BentoGridThird />
+
+      {/*   <div className="flex flex-col md:gap-[120px] gap-[60px]">
         {PaymeFinance()}
         {PaymeFinanceMobile()}
         {Smartio()}
@@ -98,7 +104,7 @@ const ProjectSection = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 
